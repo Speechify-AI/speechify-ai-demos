@@ -1,0 +1,2 @@
+python-dotenv>=1.0.1
+speechify-api>=2.0.0

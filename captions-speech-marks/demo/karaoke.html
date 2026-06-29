@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Karaoke caption demo</title>
+  <style>
+    :root {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      color: #111;
+      background: #fff;
+    }
+    body { max-width: 48rem; margin: 4rem auto; padding: 0 2rem; }
+    h1 { font-weight: 100; font-size: 2.5rem; letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+    p.subtitle { color: #666; font-size: 1rem; margin: 0 0 2.5rem; }
+
+    audio { width: 100%; margin-bottom: 2rem; }
+
+    .transcript {
+      font-size: 1.5rem; font-weight: 300; line-height: 1.6;
+      letter-spacing: -0.01em; color: #555;
+    }
+    .transcript .word {
+      transition: background-color 80ms ease-out, color 80ms ease-out;
+      padding: 0.05em 0.2em; border-radius: 4px; margin: 0 0.05em;
+      display: inline-block;
+    }
+    .transcript .word.active {
+      background: #111;
+      color: #fff;
+    }
+
+    .footer {
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;
+      font-size: 0.875rem; color: #999;
+    }
+    .footer code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace; background: #f5f5f5; padding: 0.1em 0.4em; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Karaoke captions, driven by speech marks</h1>
+  <p class="subtitle">Press play. Each word lights up in sync with the audio, using the same WebVTT cues the browser renders below by default.</p>
+
+  <audio controls id="audio">
+    <source src="sample.mp3" type="audio/mpeg">
+    <track id="track" default kind="captions" srclang="en" src="sample.vtt">
+  </audio>
+
+  <div class="transcript" id="transcript"></div>
+
+  <div class="footer">
+    Driven by the <code>cuechange</code> event on the <code>TextTrack</code>. No timer, no polling, no custom audio decoder.
+  </div>
+
+  <script>
+    const transcript = document.getElementById("transcript");
+    const audio = document.getElementById("audio");
+    const track = audio.textTracks[0];
+    let words = [];
+
+    // Parse our own VTT to get the word list with timings (we could also derive from cues but
+    // this gives us a stable DOM up front and the cuechange handler just toggles classes).
+    fetch("sample.vtt").then(r => r.text()).then(vtt => {
+      const blocks = vtt.split(/\r?\n\r?\n/).slice(1);
+      words = blocks.map((b, i) => {
+        const lines = b.trim().split(/\r?\n/);
+        if (lines.length < 2) return null;
+        return { idx: i, text: lines[1] };
+      }).filter(Boolean);
+      transcript.innerHTML = words.map(w =>
+        `<span class="word" data-text="${w.text}">${w.text}</span>`
+      ).join(" ");
+    });
+
+    // Fires whenever the active cue set on the track changes (start / end of every cue).
+    track.addEventListener("cuechange", () => {
+      const active = track.activeCues && track.activeCues[0];
+      document.querySelectorAll(".transcript .word.active").forEach(el => el.classList.remove("active"));
+      if (!active) return;
+      const wantText = active.text.trim();
+      // Match the first non-already-played span with the same text. For repeated words ("the"
+      // appears twice in the demo) we move forward through the transcript with currentTime.
+      const allSpans = document.querySelectorAll(".transcript .word");
+      const audioTime = audio.currentTime * 1000;
+      // Find span whose word text matches and is positioned at the right rough index.
+      // Simpler: walk in order, pick the first that matches text and whose data-played isn't set.
+      for (const span of allSpans) {
+        if (span.dataset.text === wantText && !span.dataset.played) {
+          span.classList.add("active");
+          span.dataset.played = "1";
+          break;
+        }
+      }
+    });
+
+    // Reset played flags when user seeks back to start.
+    audio.addEventListener("seeked", () => {
+      if (audio.currentTime < 0.1) {
+        document.querySelectorAll(".transcript .word").forEach(el => {
+          el.classList.remove("active");
+          delete el.dataset.played;
+        });
+      }
+    });
+  </script>
+</body>
+</html>

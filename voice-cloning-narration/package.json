@@ -1,0 +1,19 @@
+{
+  "name": "voice-cloning-narration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Speechify voice cloning end-to-end lifecycle demo",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "demo": "node -e \"require('http').createServer((req,res)=>{const fs=require('fs');const p=require('path');const f=p.join('demo',req.url==='/'?'lifecycle.html':req.url);if(!fs.existsSync(f)){res.writeHead(404);res.end();return}res.writeHead(200,{'content-type':'text/html'});fs.createReadStream(f).pipe(res)}).listen(8765,()=>console.log('http://localhost:8765/'))\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

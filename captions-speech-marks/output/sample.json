@@ -1,0 +1,341 @@
+{
+  "words": [
+    {
+      "type": "word",
+      "start": 0,
+      "end": 9,
+      "start_time": 0,
+      "end_time": 797,
+      "value": "Speechify"
+    },
+    {
+      "type": "word",
+      "start": 10,
+      "end": 17,
+      "start_time": 797,
+      "end_time": 1352,
+      "value": "returns"
+    },
+    {
+      "type": "word",
+      "start": 18,
+      "end": 22,
+      "start_time": 1352,
+      "end_time": 1523,
+      "value": "word"
+    },
+    {
+      "type": "word",
+      "start": 22,
+      "end": 23,
+      "start_time": 1523,
+      "end_time": 1565,
+      "value": "-"
+    },
+    {
+      "type": "word",
+      "start": 23,
+      "end": 28,
+      "start_time": 1565,
+      "end_time": 1821,
+      "value": "level"
+    },
+    {
+      "type": "word",
+      "start": 29,
+      "end": 39,
+      "start_time": 1821,
+      "end_time": 2504,
+      "value": "timestamps"
+    },
+    {
+      "type": "word",
+      "start": 40,
+      "end": 49,
+      "start_time": 2504,
+      "end_time": 3144,
+      "value": "alongside"
+    },
+    {
+      "type": "word",
+      "start": 50,
+      "end": 55,
+      "start_time": 3144,
+      "end_time": 3443,
+      "value": "every"
+    },
+    {
+      "type": "word",
+      "start": 56,
+      "end": 65,
+      "start_time": 3443,
+      "end_time": 3869,
+      "value": "synthesis"
+    },
+    {
+      "type": "word",
+      "start": 66,
+      "end": 71,
+      "start_time": 3869,
+      "end_time": 4893,
+      "value": "call."
+    },
+    {
+      "type": "word",
+      "start": 72,
+      "end": 76,
+      "start_time": 4893,
+      "end_time": 5107,
+      "value": "Each"
+    },
+    {
+      "type": "word",
+      "start": 77,
+      "end": 83,
+      "start_time": 5107,
+      "end_time": 5491,
+      "value": "speech"
+    },
+    {
+      "type": "word",
+      "start": 84,
+      "end": 88,
+      "start_time": 5491,
+      "end_time": 5789,
+      "value": "mark"
+    },
+    {
+      "type": "word",
+      "start": 89,
+      "end": 94,
+      "start_time": 5789,
+      "end_time": 6088,
+      "value": "tells"
+    },
+    {
+      "type": "word",
+      "start": 95,
+      "end": 98,
+      "start_time": 6088,
+      "end_time": 6301,
+      "value": "you"
+    },
+    {
+      "type": "word",
+      "start": 99,
+      "end": 103,
+      "start_time": 6301,
+      "end_time": 6429,
+      "value": "when"
+    },
+    {
+      "type": "word",
+      "start": 104,
+      "end": 105,
+      "start_time": 6429,
+      "end_time": 6515,
+      "value": "a"
+    },
+    {
+      "type": "word",
+      "start": 106,
+      "end": 110,
+      "start_time": 6515,
+      "end_time": 6771,
+      "value": "word"
+    },
+    {
+      "type": "word",
+      "start": 111,
+      "end": 117,
+      "start_time": 6771,
+      "end_time": 7112,
+      "value": "starts"
+    },
+    {
+      "type": "word",
+      "start": 118,
+      "end": 121,
+      "start_time": 7112,
+      "end_time": 7240,
+      "value": "and"
+    },
+    {
+      "type": "word",
+      "start": 122,
+      "end": 126,
+      "start_time": 7240,
+      "end_time": 7453,
+      "value": "ends"
+    },
+    {
+      "type": "word",
+      "start": 127,
+      "end": 129,
+      "start_time": 7453,
+      "end_time": 7539,
+      "value": "in"
+    },
+    {
+      "type": "word",
+      "start": 130,
+      "end": 133,
+      "start_time": 7539,
+      "end_time": 7667,
+      "value": "the"
+    },
+    {
+      "type": "word",
+      "start": 134,
+      "end": 140,
+      "start_time": 7667,
+      "end_time": 8307,
+      "value": "audio,"
+    },
+    {
+      "type": "word",
+      "start": 141,
+      "end": 149,
+      "start_time": 8307,
+      "end_time": 8733,
+      "value": "measured"
+    },
+    {
+      "type": "word",
+      "start": 150,
+      "end": 152,
+      "start_time": 8733,
+      "end_time": 9032,
+      "value": "to"
+    },
+    {
+      "type": "word",
+      "start": 153,
+      "end": 156,
+      "start_time": 9032,
+      "end_time": 9160,
+      "value": "the"
+    },
+    {
+      "type": "word",
+      "start": 157,
+      "end": 169,
+      "start_time": 9160,
+      "end_time": 10355,
+      "value": "millisecond."
+    },
+    {
+      "type": "word",
+      "start": 170,
+      "end": 173,
+      "start_time": 10355,
+      "end_time": 10483,
+      "value": "You"
+    },
+    {
+      "type": "word",
+      "start": 174,
+      "end": 177,
+      "start_time": 10483,
+      "end_time": 10653,
+      "value": "can"
+    },
+    {
+      "type": "word",
+      "start": 178,
+      "end": 185,
+      "start_time": 10653,
+      "end_time": 11037,
+      "value": "convert"
+    },
+    {
+      "type": "word",
+      "start": 186,
+      "end": 191,
+      "start_time": 11037,
+      "end_time": 11251,
+      "value": "these"
+    },
+    {
+      "type": "word",
+      "start": 192,
+      "end": 200,
+      "start_time": 11251,
+      "end_time": 11677,
+      "value": "directly"
+    },
+    {
+      "type": "word",
+      "start": 201,
+      "end": 205,
+      "start_time": 11677,
+      "end_time": 11848,
+      "value": "into"
+    },
+    {
+      "type": "word",
+      "start": 206,
+      "end": 212,
+      "start_time": 11848,
+      "end_time": 12616,
+      "value": "WebVTT"
+    },
+    {
+      "type": "word",
+      "start": 213,
+      "end": 217,
+      "start_time": 12616,
+      "end_time": 13085,
+      "value": "cues"
+    },
+    {
+      "type": "word",
+      "start": 218,
+      "end": 225,
+      "start_time": 13085,
+      "end_time": 13384,
+      "value": "without"
+    },
+    {
+      "type": "word",
+      "start": 226,
+      "end": 229,
+      "start_time": 13384,
+      "end_time": 13597,
+      "value": "any"
+    },
+    {
+      "type": "word",
+      "start": 230,
+      "end": 236,
+      "start_time": 13597,
+      "end_time": 13939,
+      "value": "forced"
+    },
+    {
+      "type": "word",
+      "start": 236,
+      "end": 237,
+      "start_time": 13939,
+      "end_time": 13981,
+      "value": "-"
+    },
+    {
+      "type": "word",
+      "start": 237,
+      "end": 246,
+      "start_time": 13981,
+      "end_time": 14408,
+      "value": "alignment"
+    },
+    {
+      "type": "word",
+      "start": 247,
+      "end": 251,
+      "start_time": 14408,
+      "end_time": 14920,
+      "value": "pass"
+    }
+  ],
+  "text": "Speechify returns word-level timestamps alongside every synthesis call. Each speech mark tells you when a word starts and ends in the audio, measured to the millisecond. You can convert these directly into WebVTT cues without any forced-alignment pass."
+}
