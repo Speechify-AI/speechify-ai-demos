@@ -6,7 +6,6 @@ Clones a voice from a short WAV sample using [`POST /v1/voices`](https://docs.sp
 
 - `src/index.ts` — clone, synthesize, delete in one script
 - `fixtures/spacewalk.wav` — sample audio for the clone (NASA ISS spacewalk, public domain, ~26 sec)
-- `demo/lifecycle.html` — three-step diagram of the clone -> use -> reuse flow
 - `output/` — will contain `narration.mp3` after a successful run, on a plan that includes cloning
 
 ## Voice cloning is plan-gated

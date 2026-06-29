@@ -11,7 +11,6 @@ Synthesizes audio with [`POST /v1/audio/speech`](https://docs.speechify.ai/tts) 
 Plus two demo pages:
 
 - `demo/karaoke.html` — working audio player with word-by-word highlight, driven by the `cuechange` event on the `TextTrack`
-- `demo/mapping.html` — side-by-side visualisation of the `speech_marks` JSON against the resulting VTT cues
 
 ## Run it yourself
 
